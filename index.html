@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Події та конференції</title>
-    <link rel="stylesheet" href="css/styles.css"> <!-- Підключення CSS -->
+
+    <!-- Підключення CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- (Опціонально) Підключення Google Fonts -->
+    <!--
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    -->
 </head>
 <body>
-<header>
-    <nav>
-        <ul>
+<!-- Шапка сайту -->
+<header class="site-header">
+    <nav class="navbar">
+        <div class="navbar-brand">Podії & Conf</div>
+        <ul class="navbar-menu">
             <li><a href="index.html">Домашня</a></li>
             <li><a href="about.html">Про нас</a></li>
             <li><a href="services.html">Послуги</a></li>
@@ -19,9 +30,28 @@
     </nav>
 </header>
 
+<!-- Головна секція (Hero) -->
 <section class="hero">
-    <h1>Ласкаво просимо на наш сайт подій та конференцій</h1>
+    <div class="hero-content">
+        <h1>Ласкаво просимо!</h1>
+        <p>Тут ви знайдете всю необхідну інформацію про наші події та конференції.</p>
+        <a href="services.html" class="btn">Наші Послуги</a>
+    </div>
 </section>
 
+<!-- Основний контент -->
+<main class="main-content">
+    <section class="intro">
+        <h2>Наша мета</h2>
+        <p>
+            Допомогти вам легко організовувати заходи будь-якого масштабу: від локальних зустрічей до міжнародних конференцій.
+        </p>
+    </section>
+</main>
+
+<!-- Підвал сайту -->
+<footer class="site-footer">
+    <p>© 2025 Події та конференції. Всі права захищено.</p>
+</footer>
 </body>
 </html>
