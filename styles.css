@@ -42,7 +42,7 @@ dir /s
 .navbar-menu {
     list-style: none;
     display: flex;
-    gap: 15px; /* Відступи між пунктами меню */
+    gap: 14px; /* Відступи між пунктами меню */
 }
 
 .navbar-menu li a {
