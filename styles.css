@@ -1,6 +1,7 @@
-/* -----------------------------------------
-   1. Скидання відступів і розмірів (reset)
------------------------------------------ */
+h1 {
+    color: #ff64a3;
+}
+/*1. Скидання відступів і розмірів (reset) */
 * {
     margin: 0;
     padding: 0;
@@ -20,13 +21,11 @@ body {
 /* -----------------------------------------
    3. Шапка та навігація
 ----------------------------------------- */
-.site-header {
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Легка тінь під шапкою */
-}
 
 .navbar {
-    max-width: 1100px; /* Ширина контейнера */
+    max-width: 1100px; /* Ширина контейнерdir /s
+dir /s
+а */
     margin: 0 auto;    /* Вирівнювання по центру */
     display: flex;
     align-items: center;
@@ -35,15 +34,15 @@ body {
 }
 
 .navbar-brand {
-    font-size: 1.5rem;
+    font-size: 35px;
     font-weight: 700;
-    color: #007bff; /* Синій відтінок (Bootstrap-style) */
+    color: #007bff;
 }
 
 .navbar-menu {
     list-style: none;
     display: flex;
-    gap: 1rem; /* Відступи між пунктами меню */
+    gap: 15px; /* Відступи між пунктами меню */
 }
 
 .navbar-menu li a {
