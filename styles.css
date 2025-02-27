@@ -180,3 +180,29 @@ dir /s
     margin-bottom: 8px;
 }
 
+/* -----------------------------------------
+                 "ПОСЛУГИ"
+----------------------------------------- */
+.services-section {
+    margin-bottom: 40px;
+}
+
+.services-section h2 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.services-section p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.services-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.services-list li {
+    margin-bottom: 10px;
+}
+
