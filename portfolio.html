@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Контакти</title>
+    <title>Портфоліо</title>
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -14,8 +14,76 @@
         <ul class="navbar-menu">
             <li><a href="index.html">Домашня</a></li>
             <li><a href="services.html">Послуги</a></li>
-            <li><a href="portfolio.html">Портфоліо</a></li>
-            <li><a href="contact.html" class="active">Контакти</a></li>
+            <li><a href="portfolio.html" class="active">Портфоліо</a></li>
+            <li><a href="contact.html">Контакти</a></li>
         </ul>
     </nav>
 </header>
+
+<!-- Основний контент -->
+<main class="main-content">
+    <section class="portfolio-section">
+        <h2>Демонстрація сервісів</h2>
+        <p>Наш сайт дозволяє виконувати всі завдання, зазначені в розділі "Послуги". Перегляньте приклади:</p>
+
+        <!-- Вкладки для демонстрації сервісів -->
+        <div class="tabs">
+            <button class="tab-button active" data-tab="conference">Організація конференцій</button>
+            <button class="tab-button" data-tab="tech-support">Технічна підтримка</button>
+            <button class="tab-button" data-tab="programs">Розробка програм</button>
+            <button class="tab-button" data-tab="branding">Брендування та маркетинг</button>
+            <button class="tab-button" data-tab="catering">Кейтеринг</button>
+        </div>
+
+        <!-- Контейнери для контенту кожної вкладки -->
+        <div class="tab-content active" id="conference">
+            <h3>Організація конференцій</h3>
+            <p>Демо: інтерактивний розклад, інформація про локацію та спікерів, можливість бронювання місць.</p>
+            <!-- Можна вставити інтерактивний календар або галерею зображень -->
+        </div>
+
+        <div class="tab-content" id="tech-support">
+            <h3>Технічна підтримка</h3>
+            <p>Демо: онлайн-чат підтримки, система відстеження заявок, трансляції подій.</p>
+        </div>
+
+        <div class="tab-content" id="programs">
+            <h3>Розробка програм</h3>
+            <p>Демо: генератор програм конференцій, підбір спікерів, інтерактивний розклад заходів.</p>
+        </div>
+
+        <div class="tab-content" id="branding">
+            <h3>Брендування та маркетинг</h3>
+            <p>Демо: приклади рекламних матеріалів, логотипи та брендбук події, інтеграція зі соцмережами.</p>
+        </div>
+
+        <div class="tab-content" id="catering">
+            <h3>Кейтеринг</h3>
+            <p>Демо: меню заходу, варіанти харчування, інформація про кейтерингові послуги.</p>
+        </div>
+    </section>
+</main>
+
+<!-- Підвал сайту -->
+<footer class="site-footer">
+    <p>© 2025 Події та конференції. Всі права захищено.</p>
+</footer>
+
+<!-- JavaScript для роботи вкладок -->
+<script>
+    document.querySelectorAll('.tab-button').forEach(button => {
+        button.addEventListener('click', () => {
+            const tab = button.getAttribute('data-tab');
+
+            // Видаляємо активні класи з кнопок і контенту
+            document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+            // Встановлюємо активний клас для натиснутої кнопки та відповідного контенту
+            button.classList.add('active');
+            document.getElementById(tab).classList.add('active');
+        });
+    });
+</script>
+</body>
+</html>

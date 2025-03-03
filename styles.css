@@ -42,7 +42,7 @@ dir /s
 .navbar-menu {
     list-style: none;
     display: flex;
-    gap: 14px; /* Відступи між пунктами меню */
+    gap: 14px;
 }
 
 .navbar-menu li a {
@@ -53,11 +53,11 @@ dir /s
 }
 
 .navbar-menu li a:hover {
-    color: #007bff; /* Ховер-ефект */
+    color: #007bff;
 }
 
 /* -----------------------------------------
-   4. Hero Section
+   4. середина фон
 ----------------------------------------- */
 .hero {
     background-color: #007bff; /* Синя заливка */
@@ -94,12 +94,12 @@ dir /s
 }
 
 .btn:hover {
-    background-color: #0056b3; /* Темніший синій */
+    background-color: #0056b3;
     color: #fff;
 }
 
 /* -----------------------------------------
-   5. Основний контент
+   5. середина контент
 ----------------------------------------- */
 .main-content {
     max-width: 1100px;
@@ -120,7 +120,7 @@ dir /s
 }
 
 /* -----------------------------------------
-    Підвал сайту
+    низ сайту сайту
 ----------------------------------------- */
 .site-footer {
     background-color: #fff;
@@ -136,7 +136,7 @@ dir /s
 }
 
 /* -----------------------------------------
-    Адаптивність (приклад)
+    Адаптивність
 ----------------------------------------- */
 @media (max-width: 768px) {
     .navbar {
@@ -206,3 +206,134 @@ dir /s
     margin-bottom: 10px;
 }
 
+/* -----------------------------------------
+  Контактна сторінка
+----------------------------------------- */
+.contact-section, .contact-info {
+    margin-bottom: 40px;
+}
+
+/* Заголовки */
+.contact-section h2,
+.contact-info h2 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* Пояснювальний текст */
+.contact-section p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Форма */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+/* Група елементів форми */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Підписи */
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+/* Поля вводу */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Чекбокс */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Кнопка Надіслати */
+.contact-form .btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Контактна інформація */
+.contact-info ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.contact-info li {
+    margin-bottom: 8px;
+}
+
+/* Адаптивність для маленьких екранів */
+@media (max-width: 768px) {
+    .contact-form {
+        margin: 0 10px 30px 10px;
+    }
+}
+/* -----------------------------------------
+   Вкладки для демонстрації сервісів
+----------------------------------------- */
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.tab-button {
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.tab-button.active {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+.tab-content {
+    display: none;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 6px;
+    margin: 0 20px;
+}
+
+.tab-content.active {
+    display: block;
+}

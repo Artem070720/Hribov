@@ -22,19 +22,67 @@
 
 <!-- Основний контент сторінки Контакти -->
 <main class="main-content">
+    <section class="contact-section">
+        <h2>Залиште свої контактні дані</h2>
+        <p>Якщо у вас є питання чи пропозиції, заповніть форму нижче.</p>
+
+        <!-- Форма зворотного зв'язку -->
+        <form class="contact-form" action="#" method="post">
+            <!-- Ім’я -->
+            <div class="form-group">
+                <label for="name">Ваше ім’я:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Ваш Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <!-- Тип запиту (Випадаючий список) -->
+            <div class="form-group">
+                <label for="inquiryType">Тип запиту:</label>
+                <select id="inquiryType" name="inquiryType">
+                    <option value="general">Загальне питання</option>
+                    <option value="booking">Бронювання конференції</option>
+                    <option value="partnership">Співпраця</option>
+                    <option value="other">Інше</option>
+                    <option value="Поставити 5">Поставити 5</option>
+                </select>
+            </div>
+
+            <!-- Повідомлення -->
+            <div class="form-group">
+                <label for="message">Повідомлення:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Ваше повідомлення..."></textarea>
+            </div>
+
+            <!-- Згода (чекбокс) -->
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="privacyPolicy" name="privacyPolicy" required>
+                <label for="privacyPolicy">Я погоджуюся з політикою конфіденційності</label>
+            </div>
+
+            <!-- Кнопка відправлення -->
+            <button type="submit" class="btn">Надіслати</button>
+        </form>
+    </section>
+
+    <!-- Блок з контактною інформацією -->
     <section class="contact-info">
-        <h2>Контактна інформація</h2>
+        <h2>Наша контактна інформація</h2>
         <ul>
-            <li><strong>Телефон:</strong> +38 (067) 123-45-67</li>
-            <li><strong>Email:</strong> info@podiiconf.ua</li>
-            <li><strong>Адреса:</strong> м. Київ, вул. Конференц-центр, 12</li>
+            <li><strong>Телефон:</strong> +38 (093) 138-55-75</li>
+            <li><strong>Email:</strong> aremhribov@gmail.com</li>
+            <li><strong>Адреса:</strong> м. Хмельницький, вул. Зарічанська, 10</li>
         </ul>
     </section>
 </main>
 
 <!-- Підвал сайту -->
 <footer class="site-footer">
-    <p> 2025 Події та конференції. Всі права захищено.</p>
+    <p>© 2025 Події та конференції. Всі права захищено.</p>
 </footer>
 </body>
 </html>
