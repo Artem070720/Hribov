@@ -381,3 +381,38 @@ dir /s
     border-radius: 14px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
+
+/* -----------------------------------------
+                  Адаптація
+----------------------------------------- */
+
+@media (max-width: 768px) {
+    /* Адаптація блоку з картинками */
+    .hero-images {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        min-height: auto;
+        margin: 20px 0;
+    }
+
+    .img-left,
+    .img-center,
+    .img-right {
+        position: static;
+        transform: none;
+        width: 80%;         /* Адаптивна ширина */
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
