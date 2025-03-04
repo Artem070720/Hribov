@@ -337,3 +337,47 @@ dir /s
 .tab-content.active {
     display: block;
 }
+
+/* -----------------------------------------
+                  Картінки
+----------------------------------------- */
+
+/* Блок, що містить обидва зображення */
+.hero-images {
+    position: relative;
+    min-height: 300px;
+    margin: 20px 0;
+}
+
+/* Перша картинка, закріплена ліворуч */
+.img-left {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%); /* Центруємо по вертикалі відносно власної висоти */
+    width: 450px;
+    border-radius: 14px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Друга картинка, точно по центру контейнера */
+.img-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    height: auto;
+    border-radius: 14px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.img-right {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 500px;
+    border-radius: 14px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
