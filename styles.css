@@ -354,7 +354,7 @@ dir /s
     position: absolute;
     left: 20px;
     top: 50%;
-    transform: translateY(-50%); /* Центруємо по вертикалі відносно власної висоти */
+    transform: translateY(-50%);
     width: 450px;
     border-radius: 14px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -372,6 +372,7 @@ dir /s
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
+/*  третя картинка, з правого боку контейнера */
 .img-right {
     position: absolute;
     right: 20px;
@@ -383,11 +384,10 @@ dir /s
 }
 
 /* -----------------------------------------
-                  Адаптація
+           Адаптація для мобілок
 ----------------------------------------- */
 
 @media (max-width: 768px) {
-    /* Адаптація блоку з картинками */
     .hero-images {
         position: static;
         display: flex;
@@ -403,7 +403,7 @@ dir /s
     .img-right {
         position: static;
         transform: none;
-        width: 80%;         /* Адаптивна ширина */
+        width: 80%;
         max-width: 300px;
         margin-bottom: 20px;
     }
