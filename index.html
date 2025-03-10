@@ -22,20 +22,22 @@
 <!-- Шапка сайту -->
 <header>
     <nav class="navbar">
+        <!-- Логотип зліва -->
         <div class="navbar-brand">Podії & Conf</div>
 
-        <!-- Кнопка "бургер" -->
-        <div class="hamburger" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
+        <!-- Список меню по центру (або лівіше) -->
         <ul class="navbar-menu">
             <li><a href="services.html">Послуги</a></li>
             <li><a href="portfolio.html">Портфоліо</a></li>
             <li><a href="contact.html">Контакти</a></li>
         </ul>
+
+        <!-- Бургер-меню справа -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </nav>
 </header>
 
@@ -45,6 +47,7 @@
         menu.classList.toggle('active');
     }
 </script>
+
 
 
 <!-- Головна секція (Hero) -->
