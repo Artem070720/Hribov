@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Події та конференції</title>
@@ -17,17 +20,32 @@
 </head>
 <body>
 <!-- Шапка сайту -->
-<header class="site-header">
+<header>
     <nav class="navbar">
         <div class="navbar-brand">Podії & Conf</div>
+
+        <!-- Кнопка "бургер" -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
         <ul class="navbar-menu">
-            <li><a href="index.html">Домашня</a></li>
             <li><a href="services.html">Послуги</a></li>
             <li><a href="portfolio.html">Портфоліо</a></li>
             <li><a href="contact.html">Контакти</a></li>
         </ul>
     </nav>
 </header>
+
+<script>
+    function toggleMenu() {
+        const menu = document.querySelector('.navbar-menu');
+        menu.classList.toggle('active');
+    }
+</script>
+
 
 <!-- Головна секція (Hero) -->
 <section class="hero">
@@ -70,3 +88,4 @@
 </footer>
 </body>
 </html>
+

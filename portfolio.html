@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Портфоліо</title>
@@ -11,14 +13,31 @@
 <header class="site-header">
     <nav class="navbar">
         <div class="navbar-brand">Podії & Conf</div>
+
+        <!-- Бургер-меню (для мобільних) -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Основне меню -->
         <ul class="navbar-menu">
             <li><a href="index.html">Домашня</a></li>
             <li><a href="services.html">Послуги</a></li>
-            <li><a href="portfolio.html" class="active">Портфоліо</a></li>
+            <li><a href="portfolio.html">Портфоліо</a></li>
             <li><a href="contact.html">Контакти</a></li>
         </ul>
     </nav>
 </header>
+
+<script>
+    function toggleMenu() {
+        const menu = document.querySelector('.navbar-menu');
+        menu.classList.toggle('active');
+    }
+</script>
+
 
 <!-- Основний контент -->
 <main class="main-content">
@@ -38,23 +57,146 @@
         <!-- Контейнери для контенту кожної вкладки -->
         <div class="tab-content active" id="conference">
             <h3>Організація конференцій</h3>
-            <p>Демо: інтерактивний розклад, інформація про локацію та спікерів, можливість бронювання місць.</p>
-            <!-- Можна вставити інтерактивний календар або галерею зображень -->
+
+            <!-- Інтерактивний розклад -->
+            <div class="conference-schedule">
+                <h4>Інтерактивний розклад</h4>
+                <table class="schedule-table">
+                    <thead>
+                    <tr>
+                        <th>Час</th>
+                        <th>Сесія</th>
+                        <th>Спікер</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>09:00 - 10:00</td>
+                        <td>Реєстрація та сніданок</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>10:00 - 11:00</td>
+                        <td>Вступне слово</td>
+                        <td>Стефанчук Руслан</td>
+                    </tr>
+                    <tr>
+                        <td>11:00 - 12:00</td>
+                        <td>Трендове бачення галузі</td>
+                        <td>Дональд Трамп</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Інформація про локацію -->
+            <div class="conference-location">
+                <h4>Локація</h4>
+                <p>Конференц-центр "Podiї & Conf", вул. Зарічанська, 10, Хмельницький</p>
+            </div>
+
+            <!-- Інформація про спікерів -->
+            <div class="conference-speakers">
+                <h4>Спікери</h4>
+                <ul class="speakers-list">
+                    <li>
+                        <img src="img/speaker1.png" alt="Спікер 1" class="speaker-photo">
+                        <div class="speaker-info">
+                            <strong>Стефанчук Руслан</strong><br>
+                            Експерт з інноваційних технологій.
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/speaker2.jpg" alt="Спікер 2" class="speaker-photo">
+                        <div class="speaker-info">
+                            <strong>Дональд Трамп</strong><br>
+                            Придурок
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Бронювання місць -->
+            <div class="conference-booking">
+                <h4>Бронювання місць</h4>
+                <p>Заповніть форму нижче, щоб забронювати своє місце на конференції:</p>
+                <form class="booking-form" action="#" method="post">
+                    <div class="form-group">
+                        <label for="booking-name">Ваше ім'я:</label>
+                        <input type="text" id="booking-name" name="booking-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="booking-email">Email:</label>
+                        <input type="email" id="booking-email" name="booking-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="booking-seats">Кількість місць:</label>
+                        <select id="booking-seats" name="booking-seats">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn">Забронювати</button>
+                </form>
+            </div>
         </div>
+
 
         <div class="tab-content" id="tech-support">
             <h3>Технічна підтримка</h3>
-            <p>Демо: онлайн-чат підтримки, система відстеження заявок, трансляції подій.</p>
+            <ul class="tech-menu">
+                <li>
+                    <h4>Онлайн-чат підтримки</h4>
+                    <p>Отримуйте негайну допомогу в режимі реального часу від нашої служби підтримки.</p>
+                </li>
+                <li>
+                    <h4>Система відстеження заявок</h4>
+                    <p>Моніторинг та ефективне управління заявками клієнтів для швидкого реагування.</p>
+                </li>
+                <li>
+                    <h4>Трансляції подій</h4>
+                    <p>Високоякісні онлайн-трансляції заходів у прямому ефірі.</p>
+                </li>
+            </ul>
         </div>
 
         <div class="tab-content" id="programs">
             <h3>Розробка програм</h3>
-            <p>Демо: генератор програм конференцій, підбір спікерів, інтерактивний розклад заходів.</p>
+            <ul class="programs-menu">
+                <li>
+                    <h4>Генератор програм конференцій</h4>
+                    <p>Автоматичне створення індивідуальних розкладів конференцій з урахуванням ваших побажань.</p>
+                </li>
+                <li>
+                    <h4>Підбір спікерів</h4>
+                    <p>Система аналізу та відбору кращих експертів для вашої конференції.</p>
+                </li>
+                <li>
+                    <h4>Інтерактивний розклад заходів</h4>
+                    <p>Динамічне відображення та оновлення розкладу заходів у режимі реального часу.</p>
+                </li>
+            </ul>
         </div>
 
         <div class="tab-content" id="branding">
             <h3>Брендування та маркетинг</h3>
-            <p>Демо: приклади рекламних матеріалів, логотипи та брендбук події, інтеграція зі соцмережами.</p>
+            <ul class="branding-menu">
+                <li>
+                    <h4>Приклади рекламних матеріалів</h4>
+                    <p>Ознайомтесь з нашими зразками рекламних кампаній, які ефективно привертають увагу до подій.</p>
+                </li>
+                <li>
+                    <h4>Логотипи та брендбук події</h4>
+                    <p>Розробка унікального візуального стилю: логотипи, фірмовий стиль та брендбук для кожної події.</p>
+                </li>
+                <li>
+                    <h4>Інтеграція зі соцмережами</h4>
+                    <p>Комплексне рішення з просування подій через популярні соціальні мережі та онлайн-платформи.</p>
+                </li>
+            </ul>
         </div>
 
         <div class="tab-content" id="catering">

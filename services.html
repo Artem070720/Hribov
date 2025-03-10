@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Послуги</title>
@@ -11,14 +13,31 @@
 <header class="site-header">
     <nav class="navbar">
         <div class="navbar-brand">Podії & Conf</div>
+
+        <!-- Бургер-меню (для мобільних) -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Основне меню -->
         <ul class="navbar-menu">
             <li><a href="index.html">Домашня</a></li>
-            <li><a href="services.html" class="active">Послуги</a></li>
+            <li><a href="services.html">Послуги</a></li>
             <li><a href="portfolio.html">Портфоліо</a></li>
             <li><a href="contact.html">Контакти</a></li>
         </ul>
     </nav>
 </header>
+
+<script>
+    function toggleMenu() {
+        const menu = document.querySelector('.navbar-menu');
+        menu.classList.toggle('active');
+    }
+</script>
+
 
 <main class="main-content">
     <section class="services-section">
